@@ -8,5 +8,5 @@ jobs:
       - run: yarn # run the `yarn` command
       - run: yarn run lint
       - run: yarn run test-expressions
-      - run: yarn run test-unit
-      - run: CIRCLE_BRANCH === "master" && yarn run build-prod && yarn deploy
+      # - run: yarn run test-unit
+      - run: (($CIRCLE_BRANCH == "master")) && yarn run build-prod && yarn deploy
