@@ -6,3 +6,6 @@ jobs:
     steps:
       - checkout # check out the code in the project directory
       - run: yarn # run the `yarn` command
+      - run: yarn run lint
+      - run: yarn run test-expressions
+      - run: yarn run test-unit
